@@ -1,0 +1,87 @@
+<!--
+		///////////////////////////////////////////////////////////////////////////////////////
+		//  Create a simple unit conversion application using JavaScript. 
+		//
+		// Written by : Jieun Kwon
+		// Written Date : Feb 9, 2018
+		// updated Date : Feb 14, 2018
+		// 
+		// Feb 11, updated : 
+		// 1. tried to do two way to call functions 
+		// (check onclick event in scripts, call function through onclick="function name" in the tag )
+		// 2. reduced lines and functions, last 2 conversion was tried to pass param for conversion 
+		//
+		// Feb 14, updated :
+		// 1. added security to website and linked the address index page below 
+		///////////////////////////////////////////////////////////////////////////////////////
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> ## Unit Conversion ##</title> 
+
+		<!-- style sheet -->
+		<link href = "css/main.css" type = "text/css" rel = "stylesheet"/> 
+	</head>
+	<body onload="document.getElementById('num').focus();">
+	 
+		 <table border="0" align="center" id="tb_main">
+			<tr>
+				<td colspan="2"> 
+					 <p class="ft_title">Unit Conversion</p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" height="40"> 
+					 <!-- input box -->
+					 <input type="textbox" id="num"> 
+					 <!-- Clear button -->
+					 <input type = "button" value="Make it clear" id = "bt_clear" onclick="initTextbox();"> 
+				</td>
+			</tr>
+			<!-- Buttons for options-->
+			<tr>
+				<td align="right">  
+					<input type = "button" value="Celsius to Fahrenheit" class="bt_general" id="btn_CF"> 
+				</td>
+				<td	align="left">
+					<input type = "button" value="Fahrenheit to Celsius" class="bt_general" id="btn_FC"> 
+				</td>
+			</tr>
+			<tr>
+				<td align="right">  
+					 <input type = "button" value="Feet to Meters" class="bt_general" onclick="convFt_Mt();"> 
+		  
+				</td>
+				<td	align="left">
+					 <input type = "button" value="Meters to Feet" class="bt_general" onclick="convMt_Ft();"> 
+				</td>
+			</tr> 
+			<tr>
+				<td align="right">  
+					 <input type = "button" value="Inches to Centimeters" class="bt_general" onclick="convIn_Cm('cm');"> 
+				</td>
+				<td	align="left">
+					 <input type = "button" value="Centimeters to Inches" class="bt_general" onclick="convIn_Cm('in');"> 
+				</td>
+			</tr> 
+			<tr>
+				<td align="right">  
+					 <input type = "button" value="Pounds to Kilograms" class="bt_general" onclick="convLb_Kg('kg');">
+				</td>
+				<td	align="left">
+					 <input type = "button" value="Kilograms to Pounds" class="bt_general" onclick="convLb_Kg('lb');"> 
+				</td>
+			</tr>
+		<!-- END: Buttons for options-->
+		</table>
+		<!-- For Conversion output -->
+		 <div id="div_result"> 
+			<p id="result"></p>
+		</div>
+		<!-- Extenal src : for all convert function -->
+		<script src="scripts/convert.js"></script> 
+		
+	</body>
+</html>
+	
