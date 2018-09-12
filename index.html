@@ -1,0 +1,91 @@
+<!--
+		//////////////////////////////////////////////////////
+		// Rock-Paper-Scissor Game 
+    //
+		// Written by : Jieun Kwon
+		// Written Date : Feb 2, 2018
+		// updated Date : Feb 3, 2018
+		//////////////////////////////////////////////////////
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment1 for Jieun Kwon</title>
+	</head>
+	<body style="text-align:center">
+		<h1>
+		Assignment 1<br>
+		Jieun Kwon <br>
+		Instructor: Amandeep Kaur<br>
+		</h1> 
+		<hr>
+		<p id="result"><!-- for printing the result after game --></p>
+		<p id="score"><!-- for printing the score after game --></p>
+		
+		<script type="text/javascript">
+		//////////////////////////////////////////////////////
+		// Rock-Paper-Scissor Game 
+		// 1. ask user to input a number for game 
+		// 2. compare values
+		// 3. ask to play again
+		// 4. print result - innerHTML
+		//////////////////////////////////////////////////////
+		
+			// variables
+			var userMove, comMove;	// number : user and computer 
+			var userScore = 0, comScore = 0; // score for game
+			var txtMove = ["Rock", "Paper", "Scissor"];  // text array to display
+			var gameChk = 1;	// 1,0 - play game or not
+			
+			// start game
+			while(gameChk == 1){
+				// get user's number : 1-Rock, 2-Paper, 3-Scissor	 
+				// then check input value 
+				userMove = parseInt(prompt("Enter a number for the game: 1-Rock, 2-Paper, 3-Scissor"));
+				while(!(userMove == 1 || userMove == 2 || userMove == 3)){ 
+					alert("Invalid input, try again");
+					userMove = parseInt(prompt("Enter a number for the game: 1-Rock, 2-Paper, 3-Scissor")); 
+				}
+				
+				// computer's value - random
+				comMove = Math.ceil(Math.random()*3); 
+				
+				// decide winner
+				if(userMove == comMove){	// if user and computer have the same value 
+					alert("You and computer all choose " + txtMove[comMove-1] + ", try again");
+				}else{
+					alert("You: " + txtMove[userMove-1] + "\nComputer: " + txtMove[comMove-1]);
+					
+					// user = 1 , com = 2 -> com win
+					// user = 2 , com = 3 -> com win
+					// user = 3 , com = 1 -> com win  
+					if((userMove == 1 && comMove == 2) || (userMove == 2 && comMove == 3) || (userMove == 3 && comMove == 1)){
+						comScore++;
+						alert("Computer win!");
+					}else{
+						userScore++;
+						alert("You win!");
+					}
+					 
+					// ask user to play again 
+					if(confirm("Do you want to play again?") == false)
+						gameChk = 0;
+				}
+			}
+			
+			// display the result 			
+			if(userScore > comScore){ 
+				document.getElementById("result").innerHTML = "Congratulations! You win!";
+				document.getElementById("result").style.color = "blue";
+			}else if(userScore < comScore){
+				document.getElementById("result").innerHTML = "Sorry, you lose!";
+				document.getElementById("result").style.color = "red";
+			}else{
+				document.getElementById("result").innerHTML = "Same score!";
+			}
+			document.getElementById("score").innerHTML = "Your score : " + userScore + "<br>" + "Computer's score : " + comScore;
+			
+		</script>
+	</body>
+</html>
+	
