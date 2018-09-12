@@ -1,0 +1,46 @@
+
+			body {
+				margin:0px;
+				text-align:center;
+			}
+ 
+			.ft_title{
+				font-size:30px;
+				font-weight:bold;
+				color:#22741C;
+			}
+
+			#div_result{
+				background-color:#F6FFCC;
+				border:thin solid #22741C;
+				height:150px;
+				width:500px;
+				margin:20px auto; 
+				text-align:center;
+				padding-top:20px; 
+				font-family:courier;
+				font-size:30px;
+				font-weight:bold;
+				color:#22741C;
+
+			}
+
+			#bt_clear{
+				background-color:#E8FFFF;
+				border:thin solid #4374D9; 
+				font-weight:bold;
+				font-size:16px;
+				color:#4374D9;				
+			}
+		 
+			.bt_general{
+				width: 220px;
+				height: 25px;
+				background-color:#EEEEEE;
+				border:thin solid #000000; 
+			}
+			
+			.bt_general:hover{
+				background-color:#E4F7BA;
+				border:thin solid #4374D9; 
+			}
