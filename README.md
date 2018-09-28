@@ -17,4 +17,4 @@
     - page return result 
 
 
-[!image](./images/Capture.JPG)
+![image](./images/Capture.JPG)
