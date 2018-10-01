@@ -3,7 +3,7 @@
 # HTML5 / CSS / JavaScript  
 
 
-1. index.html - simple lock, Scissor, Papre Game 
+1. index.html - simple Rock-Scissors-Paper Game with computer
 ----------------------------------------
 
     - user choose one
