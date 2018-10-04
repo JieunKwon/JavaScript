@@ -114,8 +114,10 @@
 		// Conversion between Pounds and Kilograms : 1 lb = 2.2046 kg  
 		// Pass param : mode
 		function convLb_Kg(mode)
-		{  
+		{    
+			
 			if(numValue()){
+				
 				
 				var num = node.value;		// textbox value
 				var inUnit;
@@ -134,5 +136,7 @@
 				
 				// output 
 				result.innerHTML = num + inUnit + " -> " + calValue + mode;  
+				
 			} 
+			
 		}
