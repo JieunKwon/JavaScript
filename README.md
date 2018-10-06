@@ -13,7 +13,7 @@
 -----------------------------------------
 
     - user enter number to convert 
-    - page return result 
+    - page return result for the converted number
 
 
 ![image](./images/Capture.JPG)
